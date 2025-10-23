@@ -730,7 +730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input_Script: {fileID: 2044954317}
   player_Controller_Script: {fileID: 74835394}
-  enemy_Script: {fileID: 1032955678}
+  enemy_Script: {fileID: 948860209}
   time_Scaler: 0.3
 --- !u!4 &386087333
 Transform:
@@ -1810,6 +1810,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &948860209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948860205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa79d3ca08d4e7d44a0b0e327fb8e489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timing_Manager_Script: {fileID: 386087332}
+  animator: {fileID: 948860207}
+  attack_Value: 0
 --- !u!1001 &1032955676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2186,6 +2201,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
       insertIndex: -1
       addedObject: {fileID: 948860206}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 948860209}
   m_SourcePrefab: {fileID: 100100000, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
 --- !u!4 &1586523137 stripped
 Transform:
@@ -2237,7 +2255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScreen: {fileID: 595459383}
-  enemy_Script: {fileID: 1032955678}
+  enemy_Script: {fileID: 948860209}
   has_Started: 0
 --- !u!1001 &1973415677
 PrefabInstance:
@@ -2519,7 +2537,7 @@ MonoBehaviour:
   start_Script: {fileID: 1685395308}
   timing_Manager: {fileID: 386087332}
   score_Manager: {fileID: 2074556164}
-  enemy_Script: {fileID: 1032955678}
+  enemy_Script: {fileID: 948860209}
   player_Can_Input: 1
   Attack_Window: 0
 --- !u!1 &2074556162
