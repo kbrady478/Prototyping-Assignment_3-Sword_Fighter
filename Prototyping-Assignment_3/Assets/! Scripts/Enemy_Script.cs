@@ -8,10 +8,11 @@ public class Enemy_Script : MonoBehaviour
 {
     [SerializeField] private Timing_Manager timing_Manager_Script;
     [SerializeField] private Animator animator;
-
+    public int attack_Value;
+    
     public void Attack_State()
     {
-        int attack_Value = Random.Range(0, 4);
+        attack_Value = Random.Range(0, 4);
         print(attack_Value);
         Reset_Bools();
         

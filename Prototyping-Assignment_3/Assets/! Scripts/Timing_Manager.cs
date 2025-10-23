@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Timing_Manager : MonoBehaviour
@@ -6,7 +7,7 @@ public class Timing_Manager : MonoBehaviour
     [SerializeField] private Player_Controller player_Controller_Script;
     [SerializeField] private Enemy_Script enemy_Script;
     [SerializeField] private float time_Scaler; // how much the game slows down or speeds up by
-    
+    private bool is_Enemy_Vulnerable = false;
 
     public void Enemy_Starts_Attack()
     {
@@ -21,12 +22,15 @@ public class Timing_Manager : MonoBehaviour
         print("enemy attack landed");
         Time.timeScale = 1;
         input_Script.player_Can_Input = false;
+        if (is_Enemy_Vulnerable == false)
+            player_Controller_Script.Take_Damage();
         enemy_Script.Idle_State();
     }// end Enemy_Attack_Landed()
 
     public void Enemy_Vulnerable()
     {
         print("enemy vulnerable");
+        is_Enemy_Vulnerable = true;
         Time.timeScale = time_Scaler;
         input_Script.Attack_Window = true;
 
@@ -36,12 +40,18 @@ public class Timing_Manager : MonoBehaviour
     {
         print("enemy idle");
         Time.timeScale = 1;
+        is_Enemy_Vulnerable = false;
         input_Script.player_Can_Input = false;
+        input_Script.Attack_Window = false;
         float idle_Time = Random.Range(0.8f, 2.5f);
         Invoke(nameof(Enemy_Starts_Attack), idle_Time);
         
     }// end Enemy_Idle()
-    
-    
+
+    public void Player_Blocked()
+    {
+        Enemy_Vulnerable();
+        enemy_Script.Attack_Blocked();
+    }// end Player_Blocked()
     
 }// end script
