@@ -730,7 +730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input_Script: {fileID: 2044954317}
   player_Controller_Script: {fileID: 74835394}
-  enemy_Script: {fileID: 948860209}
+  enemy_Script: {fileID: 1032955678}
   time_Scaler: 0.3
 --- !u!4 &386087333
 Transform:
@@ -1350,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test_Sword (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b1ee83e1883ad7658d9cb5e1877003c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1796,7 +1800,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948860205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0922929dc2eed414a9615cb032c586be, type: 2}
   m_CullingMode: 0
@@ -1817,7 +1821,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948860205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa79d3ca08d4e7d44a0b0e327fb8e489, type: 3}
   m_Name: 
@@ -1891,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b1ee83e1883ad7658d9cb5e1877003c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2141,16 +2145,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6197502
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6197502
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6197502
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.30293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.801
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 543f979022f17eb42bbbe1200b030265, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2255,7 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScreen: {fileID: 595459383}
-  enemy_Script: {fileID: 948860209}
+  enemy_Script: {fileID: 1032955678}
   has_Started: 0
 --- !u!1001 &1973415677
 PrefabInstance:
@@ -2537,7 +2553,7 @@ MonoBehaviour:
   start_Script: {fileID: 1685395308}
   timing_Manager: {fileID: 386087332}
   score_Manager: {fileID: 2074556164}
-  enemy_Script: {fileID: 948860209}
+  enemy_Script: {fileID: 1032955678}
   player_Can_Input: 1
   Attack_Window: 0
 --- !u!1 &2074556162
