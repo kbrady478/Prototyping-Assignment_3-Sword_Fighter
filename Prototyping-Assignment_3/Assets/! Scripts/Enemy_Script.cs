@@ -56,7 +56,13 @@ public class Enemy_Script : MonoBehaviour
         Reset_Bools();
         
         animator.SetBool("Blocked", true);
+        Invoke(nameof(Reset_Blocked), 0.1f);
     }// end Attack_Blocked()
+
+    public void Reset_Blocked()
+    {
+        animator.SetBool("Blocked", false);   
+    }
     
     public void Vulnerable_State()
     {
